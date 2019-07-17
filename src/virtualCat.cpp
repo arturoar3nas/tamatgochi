@@ -9,19 +9,19 @@ VirtualCat::VirtualCat() {
     //!constructor
 }
 
-void VirtualCat::set_stamina(const int stamina2){
+void VirtualCat::set_stamina(const int stamina2) noexcept{
     stamina=stamina2;
 }
 
-void VirtualCat::set_inpoints(const int intelligence){
+void VirtualCat::set_inpoints(const int intelligence) noexcept{
     inpoints=intelligence;
 }
 
-int VirtualCat::get_stamina() const {
+int VirtualCat::get_stamina() const noexcept{
     return stamina;
 }
 
-int VirtualCat::get_inpoints() const {
+int VirtualCat::get_inpoints() const noexcept{
     return inpoints;
 }
 
@@ -31,7 +31,7 @@ void VirtualCat::mod_intelligence(const int more){
     set_inpoints(inte);
 }
 
-void VirtualCat::mod_stamina(const int type){
+void VirtualCat::mod_stamina(const int type) {
     int stam;
     stam=get_stamina();
 
