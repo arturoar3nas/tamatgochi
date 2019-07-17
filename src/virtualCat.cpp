@@ -9,29 +9,29 @@ VirtualCat::VirtualCat() {
     //!constructor
 }
 
-void VirtualCat::set_stamina(int stamina2){
+void VirtualCat::set_stamina(const int stamina2){
     stamina=stamina2;
 }
 
-void VirtualCat::set_inpoints(int intelligence){
+void VirtualCat::set_inpoints(const int intelligence){
     inpoints=intelligence;
 }
 
-int VirtualCat::get_stamina(){
+int VirtualCat::get_stamina() const {
     return stamina;
 }
 
-int VirtualCat::get_inpoints(){
+int VirtualCat::get_inpoints() const {
     return inpoints;
 }
 
-void VirtualCat::mod_intelligence(int more){
+void VirtualCat::mod_intelligence(const int more){
     int inte=get_inpoints();
     inte=inte+more;
     set_inpoints(inte);
 }
 
-void VirtualCat::mod_stamina(int type){
+void VirtualCat::mod_stamina(const int type){
     int stam;
     stam=get_stamina();
 
@@ -45,8 +45,7 @@ void VirtualCat::mod_stamina(int type){
 }
 
 void VirtualCat::blink(){
-    int in;
-    in=get_stamina();
+    int in=get_stamina();
     if(in<=0){
         std::cout<<"not enough stamina!! eat something";
         z3();
@@ -71,7 +70,7 @@ void VirtualCat::blink(){
 }
 
 void VirtualCat::run(){
-    std::string murdy="(^.w.^)";
+    const std::string murdy="(^.w.^)";
     int st;
     st=get_stamina();
     if(st<=0){
@@ -93,8 +92,8 @@ void VirtualCat::run(){
 }
 
 void VirtualCat::surprised(){
-    std::string murdy="(^.w.^)";
-    std::string murdy2="(^owo^)";
+    const std::string murdy="(^.w.^)";
+    const std::string murdy2="(^owo^)";
 
     for(int i=0;i<6;i++){
         std::cout<<murdy<<std::endl;
@@ -111,9 +110,9 @@ void VirtualCat::surprised(){
 }
 
 void VirtualCat::eating(){
-    std::string murdy="(^.w.^) ***";
-    std::string murdy2="(^.0.^)  **";
-    std::string murdy3="(^.w.^)   *";
+    const std::string murdy="(^.w.^) ***";
+    const std::string murdy2="(^.0.^)  **";
+    const std::string murdy3="(^.w.^)   *";
 
     for(int i=0;i<6;i++){
         std::cout<<murdy;
@@ -139,9 +138,9 @@ void VirtualCat::eating(){
 
 void VirtualCat::chat(std::string yousay){
     //string yousay
-    std::string kittysay="meow\n";
-    std::string kittysay2="prrrrr\n";
-    std::string kittysay3="meeeeow prrr\n";
+    const std::string kittysay="meow\n";
+    const std::string kittysay2="prrrrr\n";
+    const std::string kittysay3="meeeeow prrr\n";
 
     int count=0;
 
@@ -176,7 +175,7 @@ void VirtualCat::chat(std::string yousay){
 }
 
 void VirtualCat::math(){
-    std::string murdy="(^.3.^)- <( ";
+    const std::string murdy="(^.3.^)- <( ";
     int reply = 0;
     int intelligence=0;
 

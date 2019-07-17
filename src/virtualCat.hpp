@@ -14,12 +14,12 @@ public:
 
     VirtualCat();
 
-    void set_stamina(int stamina2);
-    void set_inpoints(int intelligence);
-    int get_stamina();
-    int get_inpoints();
-    void mod_intelligence(int more);
-    void mod_stamina(int type);
+    void set_stamina(const int stamina2);
+    void set_inpoints(const int intelligence);
+    int  get_stamina() const;
+    int  get_inpoints() const;
+    void mod_intelligence(const int more);
+    void mod_stamina(const int type);
     void blink();
     void run();
     void surprised();
